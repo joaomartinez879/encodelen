@@ -1,5 +1,5 @@
 {
-  "name": "encodejurl",
+  "name": "encodelen",
   "description": "Encode a URL to a percent-encoded form, excluding already-encoded sequences",
   "version": "1.0.2",
   "contributors": [
@@ -8,11 +8,12 @@
   "license": "MIT",
   "keywords": [
     "encode",
-    "encodejurl",
+    "encodelen",
     "url"
   ],
-  "repository": "joaomartinez879/encodejurl",
+  "repository": "joaomartinez879/encodelen",
   "devDependencies": {
+    "axios": "^0.21.4",
     "eslint": "3.19.0",
     "eslint-config-standard": "10.2.1",
     "eslint-plugin-import": "2.8.0",
